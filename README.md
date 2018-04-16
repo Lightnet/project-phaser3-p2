@@ -4,7 +4,7 @@ Created by: Lightnet
 
 License: MIT
 
-Status: Work in progress.
+Status: Prototype test build.
 
 # Required:
  * Nodejs
@@ -16,7 +16,7 @@ Status: Work in progress.
 
  Project is base on lance-gg github spaace game mutliplayer.
 
- [Spaaace](https://github.com/lance-gg/spaaace) Pixi.js > Phaser 3.x Frameworks.
+ [Spaaace](https://github.com/lance-gg/spaaace) github | Pixi.js > Phaser 3.x Frameworks.
 
 # Controls:
  * Space = Shoot
@@ -39,6 +39,7 @@ Status: Work in progress.
 
 # Notes:
  * p2.js 2D physics simple test builds.
+ * PhysicalObject2D.js is not build since build on default position and simple physics that need to be rework.
 
 # Credits:
  * [Spaace](https://github.com/lance-gg/spaaace) Github
