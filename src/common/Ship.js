@@ -3,12 +3,15 @@
 */
 
 import Serializer from 'lance/serialize/Serializer';
-import DynamicObject from 'lance/serialize/DynamicObject';
+//import DynamicObject from 'lance/serialize/DynamicObject';
 import Renderer from '../client/MyRenderer';
 import ShipActor from '../client/ShipActor';
 import TwoVector from 'lance/serialize/TwoVector';
 
-export default class Ship extends DynamicObject {
+import PhysicalObject2D from './PhysicalObject2D';
+
+//export default class Ship extends DynamicObject {
+export default class Ship extends PhysicalObject2D {    
 
     constructor(gameEngine, options, props){
         super(gameEngine, options, props);
@@ -143,14 +146,15 @@ export default class Ship extends DynamicObject {
 
     RotatingLeft(){
         if(this.physicsObj){
-            this.angle -= (Math.PI / 180) * this.rotationSpeed;
+            this.angle -= (Math.PI / 180) * 1;
             //console.log(this.angle);
         }
     }
 
     RotatingRight(){
         if(this.physicsObj){
-            this.angle += (Math.PI / 180) * this.rotationSpeed;
+            this.angle += (Math.PI / 180) * 1;
+            //console.log(this.rotationSpeed);
             //console.log(this.angle);
         }
     }

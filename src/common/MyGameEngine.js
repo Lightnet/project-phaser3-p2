@@ -121,10 +121,8 @@ export default class MyGameEngine extends GameEngine {
         //this.physicsEngine.addGround(0, 0, {});
         //console.log(this.physicsEngine);
         console.log("init game!");
-
         //this.addObjectToWorld(new MJRectangle(this, null, {position: new TwoVector(400, 600)}));
-
-        this.addship(0);
+        //this.addship(0);
     }
 
     addship(playerId){
