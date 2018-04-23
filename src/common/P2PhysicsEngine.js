@@ -20,9 +20,9 @@ export default class P2PhysicsEngine extends PhysicsEngine {
 
         //console.log(world);
         //console.log("p2 Physics");
-        this.fixedTimeStep = 1 / 60; // seconds
-        this.maxSubSteps = 10; // Max sub steps to catch up with the wall clock
-        this.lastTime;
+        //this.fixedTimeStep = 1 / 60; // seconds
+        //this.maxSubSteps = 10; // Max sub steps to catch up with the wall clock
+        //this.lastTime;
 
         world.on('postStep', (event)=>{
             this.postStep(event);

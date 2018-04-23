@@ -1,6 +1,4 @@
 import Serializer from 'lance/serialize/Serializer';
-//import DynamicObject from 'lance/serialize/DynamicObject';
-import Renderer from '../client/MyRenderer';
 import TwoVector from 'lance/serialize/TwoVector';
 import MathUtils from 'lance/lib/MathUtils';
 import GameObject from 'lance/serialize/GameObject';
@@ -152,7 +150,6 @@ class PhysicalObject2D extends GameObject {
 
         this.position.copy(other.position);
         this.angle = other.angle;
-        //console.log(this.angle);
         this.angularVelocity = other.angularVelocity;
 
         if (!options || !options.keepVelocity) {
@@ -169,7 +166,6 @@ class PhysicalObject2D extends GameObject {
         this.copyVector(this.physicsObj.velocity, this.velocity);
         this.angle = this.physicsObj.angle;
         this.angularVelocity = this.physicsObj.angularVelocity;
-        //console.log(this.angle);
     }
 
     // generic vector copy.  We need this because different
@@ -189,6 +185,7 @@ class PhysicalObject2D extends GameObject {
             target.x = sourceVec.x;
             target.y = sourceVec.y;
         }
+        //console.log(target);
     }
 
     // update position, angle, angular velocity, and velocity from new game state.
@@ -197,6 +194,7 @@ class PhysicalObject2D extends GameObject {
         this.copyVector(this.velocity, this.physicsObj.velocity);
         this.physicsObj.angle = this.angle;
         this.physicsObj.angularVelocity = this.angularVelocity;
+        //console.log(this.position);
     }
 
     // apply one increment of bending
@@ -225,7 +223,6 @@ class PhysicalObject2D extends GameObject {
 
         // slerp to target position
         this.position.lerp(nextObj.position, percent);
-        //console.log(this.angle);
         this.angle = MathUtils.interpolateDeltaWithWrapping(this.angle, nextObj.angle, percent, 0, 2 * Math.PI);
     }
 }

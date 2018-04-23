@@ -18,7 +18,6 @@ export default class Ship extends PhysicalObject2D {
         this.showThrust = 0;
         this.isBot = false;
         this.angle = 0.1;
-        
     }
 
     get maxSpeed() { return 3.0; }
